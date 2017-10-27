@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>room1.otfx</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="aframe.0.6.1.min.js"></script>
+    <script src="aframe-animation-component.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  
+  <body>
+    <div id="splash">
+      <div class="loading"></div>
+    </div>
+    
+    <a-scene fog="color: #b3b3b3; far: 0.00; type: linear;">
+      <a-assets>
+        <img id="sky_lightbluejpg" src="assets/sky_lightblue.jpg">
+        <a-asset-item id="sofaobj" src="assets/sofa.obj"></a-asset-item>
+        <a-asset-item id="emptyroom1aobj" src="assets/empty room1a.obj"></a-asset-item>
+        <a-asset-item id="tvshrobj" src="assets/tvshr.obj"></a-asset-item>
+        <a-asset-item id="tvdeskobj" src="assets/tvdesk.obj"></a-asset-item>
+        <a-asset-item id="mancuaobj" src="assets/mancua.obj"></a-asset-item>
+        <a-asset-item id="speakerobj" src="assets/speaker.obj"></a-asset-item>
+        <a-asset-item id="tvobj" src="assets/tv.obj"></a-asset-item>
+        <img id="1png" src="assets/1.png">
+      </a-assets>
+      
+      <a-entity id="main-camera-wrapper" position="-75 75.00 0" rotation="0 0.00 0" animation="delay: 0; dir: normal; dur: 400; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: ring-clicked; to: -75 71.8 13.7; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: -75 75.00 0; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; ">
+        <a-camera id="main-camera" user-height="0" visible="true" wasd-controls="acceleration: 75; easing: 10; enabled: true; fly: false;"
+        cursor="rayOrigin: mouse;" raycaster="objects: .clickable"></a-camera>
+      </a-entity>
+      
+      <a-sky id="sky" radius="5000" segments-height="20" segments-width="64" color="#181818"
+      flat-shading="true" opacity="1" repeat="1 1" shader="standard" side="double" src="#sky_lightbluejpg"
+      position="0 0 0" rotation="0 0 0" scale="-1 1 1" visible="true"></a-sky>
+      
+      <a-plane id="ground" height="5000" width="5000" color="#797979" metalness="0.5"
+      opacity="1" repeat="1 1" roughness="1" shader="standard" side="double" position="0 0 0"
+      rotation="-90 0 0" visible="true"></a-plane>
+      
+      <a-light id="point-light-1" color="#ffffff" distance="0" intensity="1"
+      type="point" light="castShadow: false;" position="0 7 5" visible="true"></a-light>
+      
+      <a-obj-model id="sofa" position="0 0 0" rotation="0 0 0" scale="1 1 1"
+      src="#sofaobj" color="#232323" opacity="1" shader="standard" side="double" metalness="0.5"
+      roughness="1" repeat="1 1" visible="true" animation="startEvents: ring-clicked; property: position; to: 0 0 -210; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: 0 0 0; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-obj-model id="room" color="#847c7c" metalness="0.5" opacity="1"
+      repeat="1 1" roughness="1" shader="standard" side="double" src="#emptyroom1aobj"
+      position="0 100 0" rotation="0 -180 0" scale="1 1 1" shadow="receive: true;" visible="true"
+      class="clickable" animation="delay: 0; dir: normal; dur: 400; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: ring-clicked; to: 0.00 100 -210; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: 0 100 0; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-obj-model id="tvshr" position="9.11 100.70 -126" rotation="0 -180 0"
+      scale="1 1 1" src="#tvshrobj" color="#281607" opacity="1" shader="standard" side="double"
+      metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: ring-clicked; property: position; to: 9.11 100.70 -336; dur: 400; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: 9.11 100.70 -126; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-obj-model id="tv-desk" position="-167.50 114.20 -532.40" rotation="0 0 0"
+      scale="1 1 1" src="#tvdeskobj" color="#1b1919" opacity="1" shader="standard" side="double"
+      metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: ring-clicked; property: position; to: -167.50 114.20 -741.4; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: -167.50 114.20 -532.40; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-obj-model id="rem" position="-493.44 100.00 96.29" rotation="0 0 0"
+      scale="1 1 1" src="#mancuaobj" color="#ffffff" opacity="1" shader="standard" side="double"
+      metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: ring-clicked; property: position; to: -493.44 100.00 -113.71; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: -493.44 100.00 96.29; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-obj-model id="loa" position="9.10 113.40 -130.70" rotation="0 -180 0"
+      scale="1 1 1" src="#speakerobj" color="#0d0d0d" opacity="1" shader="standard" side="double"
+      metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: ring-clicked; property: position; to: 9.10 113.40 -340.74; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: 9.10 113.40 -130.70; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-obj-model id="tv" position="10.30 111.30 -130.00" rotation="0 -180 0"
+      scale="1 1 1" src="#tvobj" color="#030303" opacity="1" shader="standard" side="double"
+      metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: ring-clicked; property: position; to: 10.30 111.30 -340; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+      animation__1="startEvents: ring-1-clicked; property: position; to: 10.30 111.30 -130.00; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-obj-model>
+      
+      <a-light id="ambient-light" color="#b7b7b7" intensity="2.50" type="ambient"
+      visible="true"></a-light>
+      
+      <a-light id="point-light" color="#292424" distance="0.00" intensity="0.00"
+      type="point" light="castShadow: true;" position="10.30 96.00 -4.10" rotation="35.81 88.61 -0.00"
+      visible="true"></a-light>
+      
+      <a-image id="image" height="3" width="4" color="#181819" metalness="0.27"
+      opacity="1" repeat="1 1" roughness="0.66" shader="standard" side="double" src="#\31 png"
+      position="-75.20 75.60 -8.10" rotation="0 0 0" scale="0.94 1 1" shadow="receive: true;"
+      visible="true" class="clickable" class="clickable" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-1-clicked; to: -79 75.60 -8.1; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: click; to: -75.20 75.60 -7.8; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: click; to: 2.21; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-2-clicked; to: -71.4 75.60 -8.10; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: image-1-clicked; to: 0.27; "
+      animation__5="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: image-2-clicked; to: 0.27; "
+      animation__6="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -75.20 75.60 -8.10; "
+      animation__7="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: room-clicked; to: 0.27; "
+      animation__8="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: ring-clicked; to: 0; "></a-image>
+      
+      <a-image id="image-1" height="3" width="4" color="#181819" metalness="0.27"
+      opacity="1" repeat="1 1" roughness="0.66" shader="standard" side="double" src="#\31 png"
+      position="-79.00 75.60 -8.10" rotation="0 0 0" scale="0.94 1 1" shadow="receive: true;"
+      visible="true" class="clickable" class="clickable" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: click; to: -75.2 75.60 -7.8; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: click; to: 2.21; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-clicked; to: -79.00 75.60 -8.10; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: image-clicked; to: 0.27; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-2-clicked; to: -79.00 75.60 -8.10; "
+      animation__5="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: image-2-clicked; to: 0.27; "
+      animation__6="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -79.00 75.60 -8.10; "
+      animation__7="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: room-clicked; to: 0.27; "
+      animation__8="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: ring-clicked; to: 0; "></a-image>
+      
+      <a-plane id="plane" height="1" width="1" color="#5e1414" metalness="0.5"
+      opacity="0" repeat="1 1" roughness="1" shader="standard" side="double" position="-77.00 75.00 -4"
+      rotation="0 0.00 0.00" scale="0.5 0.2 1" shadow="receive: true;" visible="true" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-1-clicked; to: -75.1 75.00 -3.7; "
+      animation__1="delay: 0; dir: normal; dur: 400; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: image-1-clicked; to: 1; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-clicked; to: -77.00 75.00 -4; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: image-clicked; to: 0; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-2-clicked; to: -77.00 75.00 -4; "
+      animation__5="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: image-2-clicked; to: 0; "
+      animation__6="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -77.00 75.00 -4; "
+      animation__7="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: room-clicked; to: 0; "
+      animation__8="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: ring-clicked; to: 0; "></a-plane>
+      
+      <a-ring id="ring" radius-inner="1" radius-outer="1.5" theta-length="360"
+      theta-start="0" color="#535353" metalness="0.78" opacity="1" repeat="1 1" roughness="0.58"
+      shader="standard" side="double" position="-73.30 71.80 9.90" rotation="90 -358.67 0.00"
+      scale="0.8 0.8 1" shadow="receive: true;" visible="true" class="clickable" class="clickable"
+      animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: click; to: -73.30 71.80 13.70; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: click; to: 0; "></a-ring>
+      
+      <a-ring id="ring-1" radius-inner="1" radius-outer="1.5" theta-length="360"
+      theta-start="0" color="#535353" metalness="0.78" opacity="1" repeat="1 1" roughness="0.58"
+      shader="standard" side="double" position="-75.00 66.90 -1" rotation="90 0 0" scale="0.8 0.8 1"
+      shadow="receive: true;" visible="true" class="clickable" class="clickable" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: ring-clicked; to: -75 66 -10; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: ring-clicked; to: 1; "
+      animation__2="startEvents: click; property: material.opacity; to: 0; dur: 200; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-ring>
+      
+      <a-image id="image-2" height="3" width="4" color="#181819" metalness="0.27"
+      opacity="0.95" repeat="1 1" roughness="0.66" shader="standard" side="double" src="#\31 png"
+      position="-71.4 75.60 -8.10" rotation="0 0 0" scale="0.94 1 1" shadow="receive: true;"
+      visible="true" class="clickable" class="clickable" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-1-clicked; to: -71.40 75.60 -8.10; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-clicked; to: -71.40 75.60 -8.1; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: image-clicked; to: 0.27; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: image-1-clicked; to: 0.27; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: click; to: -75.2 75.60 -7.8; "
+      animation__5="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: click; to: 2.21; "
+      animation__6="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -71.4 75.60 -8.10; "
+      animation__7="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.metalness; startEvents: room-clicked; to: 0.27; "
+      animation__8="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: material.opacity; startEvents: ring-clicked; to: 0; "></a-image>
+      
+      <a-text id="text" position="-77 75.40 -4.00" rotation="0.00 0.00 0.00"
+      scale="1 1 1" align="center" anchor="center" color="#9f9f9f" font="assets/Interface-Regular.fnt"
+      height="0" letter-spacing="0" line-height="30" opacity="1" side="double" value="personal"
+      width="4.60" wrap-count="36" visible="true" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-1-clicked; to: -75.14 75.40 -3.7; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-clicked; to: -77.00 75.40 -4.00; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-2-clicked; to: -77.00 75.40 -4.00; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -77.00 75.40 -4.00; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: text.opacity; startEvents: ring-clicked; to: 0; "></a-text>
+      
+      <a-text id="text-1" position="-75.14 75.40 -4.00" rotation="0.00 0.00 0.00"
+      scale="1 1 1" align="center" anchor="center" color="#9f9f9f" font="assets/Interface-Regular.fnt"
+      height="0" letter-spacing="0" line-height="30" opacity="1" side="double" value="studio"
+      width="4.60" wrap-count="36" visible="true" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-1-clicked; to: -77 75.40 -4.00; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-2-clicked; to: -73.2 75.40 -4.00; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-clicked; to: -75.14 75.40 -3.7; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -75.14 75.40 -4.00; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: text.opacity; startEvents: ring-clicked; to: 0; "></a-text>
+      
+      <a-text id="text-2" position="-73.20 75.40 -4.00" rotation="0.00 0.00 0.00"
+      scale="1 1 1" align="center" anchor="center" color="#9f9f9f" font="assets/Interface-Regular.fnt"
+      height="0" letter-spacing="0" line-height="30" opacity="1" side="double" value="showroom"
+      width="4.60" wrap-count="36" visible="true" animation="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-clicked; to: -73.20 75.40 -4.00; "
+      animation__1="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-1-clicked; to: -73.20 75.40 -4.00; "
+      animation__2="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: image-2-clicked; to: -75.14 75.40 -3.7; "
+      animation__3="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: position; startEvents: room-clicked; to: -73.20 75.40 -4.00; "
+      animation__4="delay: 0; dir: normal; dur: 200; easing: linear; elasticity: 400; loop: 0; property: text.opacity; startEvents: ring-clicked; to: 0; "></a-text>
+    </a-scene>
+  </body>
+
+</html>
